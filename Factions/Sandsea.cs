@@ -32,7 +32,15 @@ public class Script {
 			bot.Map.GetMapItem( 248 );
 			bot.Map.GetMapItem( 249 );
 			
-			bot.Player.Hunt( "Bupers Camel|Cactus Creeper|Desert Vase|Sand Monkey" );
+			bot.Player.Hunt( "Desert Vase" );
+			bot.Player.Hunt( "Bupers Camel|Sand Monkey" );
+			
+			bot.Map.GetMapItem( 247 );
+			bot.Map.GetMapItem( 248 );
+			bot.Map.GetMapItem( 249 );
+			
+			bot.Player.Hunt( "Cactus Creeper" );
+			bot.Player.Hunt( "Sand Monkey|Bupers Camel" );
 		}
 	}
 }
