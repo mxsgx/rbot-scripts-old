@@ -2,8 +2,11 @@ using RBot;
 
 public class Script {
 	public void CheckQuests( ScriptInterface bot ) {
-		bot.Quests.EnsureAccept( 3298 );
-		bot.Quests.EnsureAccept( 3050 );
+		if ( ! bot.Quests.IsInProgress( 3298 ) )
+			bot.Quests.EnsureAccept( 3298 );
+		
+		if ( ! bot.Quests.IsInProgress( 3050 ) )
+			bot.Quests.EnsureAccept( 3050 );
 		
 		if ( bot.Quests.CanComplete( 3298 ) )
 			bot.Quests.EnsureComplete( 3298 );
@@ -11,10 +14,12 @@ public class Script {
 		if ( bot.Quests.CanComplete( 3050 ) )
 			bot.Quests.EnsureComplete( 3050 );
 		
-		bot.Quests.EnsureAccept( 3298 );
-		bot.Quests.EnsureAccept( 3050 );
+		if ( ! bot.Quests.IsInProgress( 3298 ) )
+			bot.Quests.EnsureAccept( 3298 );
+		
+		if ( ! bot.Quests.IsInProgress( 3050 ) )
+			bot.Quests.EnsureAccept( 3050 );
 	}
-  
 	public void ScriptMain( ScriptInterface bot ) {
 		bot.Options.SafeTimings = true;
 		bot.Options.RestPackets = true;
