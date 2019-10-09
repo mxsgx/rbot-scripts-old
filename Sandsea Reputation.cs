@@ -23,7 +23,6 @@ public class Script {
 		bot.Options.SafeTimings = true;
 		bot.Options.RestPackets = true;
 		bot.Options.ExitCombatBeforeQuest = true;
-		bot.Options.HuntDelay = 500;
 		bot.Options.InfiniteRange = true;
 		
 		bot.Skills.Add( 1, 1 );
@@ -48,6 +47,7 @@ public class Script {
 			foreach ( string monster in monsters ) {
 				bot.Player.Hunt( monster );
 				GetMapItem( bot );
+				bot.Sleep( 1000 );
 				CheckQuests( bot );
 			}
 		}
