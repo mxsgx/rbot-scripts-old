@@ -25,7 +25,6 @@ public class Script {
 		bot.Options.RestPackets = true;
 		bot.Options.ExitCombatBeforeQuest = true;
 		bot.Options.InfiniteRange = true;
-		bot.Options.HuntDelay = 500;
 		
 		bot.Skills.Add( 1, 1 );
 		bot.Skills.Add( 2, 1 );
@@ -47,8 +46,9 @@ public class Script {
 				"Wind Elemental"
 			};
 			
-			foreach( string monster in monsters ) {
+			foreach ( string monster in monsters ) {
 				bot.Player.Hunt( monster );
+				bot.Sleep( 1000 );
 				CheckQuests( bot );
 			}
 		}
