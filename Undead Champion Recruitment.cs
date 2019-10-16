@@ -20,6 +20,7 @@ public class Script {
 		bot.Options.SafeTimings = true;
 		bot.Options.RestPackets = true;
 		bot.Options.InfiniteRange = true;
+		bot.Options.ExitCombatBeforeQuest = true;
 		bot.Drops.RejectElse = true;
 		
 		bot.Drops.Add( "Legion Token" );
