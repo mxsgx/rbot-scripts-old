@@ -6,16 +6,20 @@ public class Script {
 		bot.Options.RestPackets = true;
 		bot.Options.InfiniteRange = true;
 		bot.Options.PrivateRooms = true;
+		bot.Drops.RejectElse = true;
 		
 		bot.Drops.Add( "Combat Trophy" );
 		bot.Drops.Start();
-		
 		bot.Skills.Add( 1, 1 );
 		bot.Skills.Add( 2, 1 );
 		bot.Skills.Add( 3, 1 );
 		bot.Skills.Add( 4, 1 );
 		bot.Skills.StartTimer();
-		
+		bot.Player.LoadBank();
+
+		if ( bot.Bank.Contains( "Combat Trophy" ) )
+			bot.Bank.ToInventory( "Combat Trophy" );
+
 		while ( true ) {
 			bot.Player.Join( "battleon" );
 			
