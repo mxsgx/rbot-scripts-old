@@ -52,14 +52,12 @@ public class Script {
 			"Undead Energy",
 			"Undead Essence"
 		};
-		
-		CheckItemsRequired();
-		
 		bot.Options.SafeTimings = true;
 		bot.Options.RestPackets = true;
 		bot.Options.InfiniteRange = true;
 		bot.Options.ExitCombatBeforeQuest = true;
-		
+		bot.Drops.RejectElse = true;
+
 		bot.Skills.Add( 1, 1 );
 		bot.Skills.Add( 2, 1 );
 		bot.Skills.Add( 3, 1 );
@@ -71,8 +69,8 @@ public class Script {
 		bot.Drops.Add( "Undead Essence" );
 		bot.Drops.Add( "Bone Dust" );
 		bot.Drops.Start();
-
-		bot.Drops.RejectElse = true;
+		bot.Player.LoadBank();
+		CheckItemsRequired();
 		
 		while ( bot.Inventory.GetQuantity( "Spirit Orb" ) < 65000 ) {
 			if ( bot.Map.Name != "battleunderb" )
