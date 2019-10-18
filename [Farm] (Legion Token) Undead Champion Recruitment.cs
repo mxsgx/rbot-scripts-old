@@ -25,13 +25,12 @@ public class Script {
 		
 		bot.Drops.Add( "Legion Token" );
 		bot.Drops.Start();
-		
 		bot.Skills.Add( 1, 1 );
 		bot.Skills.Add( 2, 1 );
 		bot.Skills.Add( 3, 1 );
 		bot.Skills.Add( 4, 1 );
 		bot.Skills.StartTimer();
-		
+		bot.Player.LoadBank();
 		CheckItemsRequired();
 		
 		while ( ! bot.ShouldExit() ) {
