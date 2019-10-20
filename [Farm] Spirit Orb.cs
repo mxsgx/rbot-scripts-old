@@ -25,21 +25,14 @@ public class Script {
 	}
 	
 	public void CheckQuests() {
-		if ( ! Bot.Quests.IsInProgress( 2082 ) )
-			Bot.Quests.EnsureAccept( 2082 );
-			
-		if ( ! Bot.Quests.IsInProgress( 2083 ) )
-			Bot.Quests.EnsureAccept( 2083 );
-			
-		if ( Bot.Quests.CanComplete( 2082 ) ) {
-			Bot.Quests.EnsureComplete( 2082 );
-			Bot.Quests.EnsureAccept( 2082 );
-		}
+		if ( Bot.Quests.CanComplete( 2082 ) )
+			Bot.Quests.EnsureComplete( 2082, -1, false, 5 );
 		
-		if ( Bot.Quests.CanComplete( 2083 ) ) {
-			Bot.Quests.EnsureComplete( 2083 );
-			Bot.Quests.EnsureAccept( 2083 );
-		}
+		if ( Bot.Quests.CanComplete( 2083 ) )
+			Bot.Quests.EnsureComplete( 2083, -1, false, 5 );
+		
+		Bot.Quests.EnsureAccept( 2082 );
+		Bot.Quests.EnsureAccept( 2083 );
 		
 		Bot.Sleep( 1000 );
 	}
