@@ -27,7 +27,7 @@ public class Script {
 			"Spirit Orb",
 			"Undead Energy",
 			"Undead Essence",
-			"Bliding Aura",
+			"Blinding Aura",
 			"Bright Aura",
 			"Blinding Light Fragments"
 		};
@@ -47,7 +47,7 @@ public class Script {
 		bot.Drops.Add( "Undead Energy" );
 		bot.Drops.Add( "Undead Essence" );
 		bot.Drops.Add( "Bone Dust" );
-		bot.Drops.Add( "Bliding Aura" );
+		bot.Drops.Add( "Blinding Aura" );
 		bot.Drops.Add( "Bright Aura" );
 		bot.Drops.Add( "Blinding Light Fragments" );
 		bot.Drops.Start();
@@ -59,7 +59,7 @@ public class Script {
 				bot.Player.Join( "battleunderb" );
 			
 			bot.Player.Hunt( "Skeleton Warrior|Skeleton Fighter|Undead Champion" );
-			Bot.Sleep( 1750 );
+			Bot.Sleep( 750 );
 			CheckItemsRequired();
 			CheckQuests();
 		}
